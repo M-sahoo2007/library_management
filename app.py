@@ -849,4 +849,4 @@ if __name__ == '__main__':
     # Always run init_db on startup to ensure any new tables (migrations)
     # are created. `CREATE TABLE IF NOT EXISTS` is idempotent so this is safe.
     init_db()
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run( host='0.0.0.0', port=7860)
