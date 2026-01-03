@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Register{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0"><i class="fas fa-user-shield"></i> Admin Registration</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-lock"></i> <strong>Restricted Access:</strong> Admin registration requires a secret verification code
+                    </div>
+                    <form method="POST" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="secret_code" class="form-label">
+                                <i class="fas fa-key"></i> Admin Verification Code *
+                            </label>
+                            <input type="password" class="form-control" id="secret_code" name="secret_code" 
+                                   placeholder="Enter admin secret code" required>
+                            <small class="text-danger">Required to register as admin</small>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 mb-3">
+                            <i class="fas fa-registered"></i> Register Admin
+                        </button>
+                    </form>
+                    <hr>
+                    <p class="text-center">Already have an account? <a href="{{ url_for('admin_login') }}">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
