@@ -598,6 +598,4 @@ python -c "from app import app; from config import ADMIN_SECRET_CODE; print('✅
 **Python Version**: 3.8+  
 **Flask Version**: 2.3.3  
 **Werkzeug Version**: 2.3.7
-#   L I B E R Y - M E N A G E M E N T 
- 
- 
+#
